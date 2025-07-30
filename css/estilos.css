@@ -4,6 +4,7 @@
   --text-shadow: 2px 1px 5px black;
 }
 
+/* GLOBALES */
 .primario {
   background-color: var(--primario);
 }
@@ -44,7 +45,11 @@
         
       }
     }
-  }
+}
+
+img {
+  max-width: 100%;
+}
 
 
 
@@ -147,6 +152,7 @@
           color: #fff;
           transition: 0.6s ease all;
           text-shadow: var(--text-shadow);
+          font-size: 18PX;
           &:hover {
             text-decoration: none;
             color: rgba(255, 255, 255, .7);
@@ -257,10 +263,385 @@
 /* About */
 
 .about {
+  
+  padding-bottom: 100px;
   .rounded-pill {
-      &.secundario {
-        padding: 7px 45px;
-        border: 1px solid #fff;
+    &.secundario {
+      padding: 7px 45px;
+      border: 1px solid #fff;
+    }
+  }
+
+  .marco-dorado {
+    position: relative;
+    display: inline-block;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 65px;
+      left: -8px;
+      width: 95%;
+      height: 90%;
+      border: 6px solid rgb(136, 116, 2);
+      border-radius: 10px;
+      transform: rotate(5deg);
+      z-index: 0;
+      box-sizing: border-box;
+    }
+    .main-image {
+      position: relative;
+      z-index: 1;
+      padding: 6px;
+      background-color: #b6cfde;
+      border-radius: 10px;   
+  }
+  }
+} 
+
+.benefits {
+  background-image: url(../imagenes/BACKGROUND\ BENEFITS.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .benefits-contenido {
+    position: relative;
+    z-index: 1;
+  }
+
+  .icono {
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    img {
+      width: 80%;
+    }
+  }
+  h3 {
+    text-align: center;
+    text-shadow: var(--text-shadow);
+    font-weight: 700;
+    margin: 0;
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.4;
+    }
+}
+
+.study {
+  .grid {
+    .twin {
+      height: 350px;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      border-radius: 10px;
+    }
+      &.admin {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ ADMINISTRATION.jpg');
+      }
+      &.account {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ ACCOUNTING.jpg');
+      }
+      &.math {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ MATHEMATICS.jpg');
+        height: 165px;
+        background-position: 50% 10%;
+        margin-bottom: 20px;
+      }
+      &.program {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ PROGRAMMING.jpg');
+        height: 165px;
+      }
+      &.arch {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ ARCHITECTURE.jpg');
+        height: 180px; 
+      }
+       &.biology {
+        background-image: url('../imagenes/IMAGE\ \ CATEGORY\ BIOLOGY.jpg');
+        height: 180px;
       }
     }
+    h3 {
+      color: #fff;
+      text-shadow: var(--text-shadow);
+      z-index: 1;
+    }
+  }
+  .rounded-pill {
+    &.secundario {
+      padding: 6px 25px;
+      border: 1px solid #fff;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .more {
+    .rounded-pill {
+      &.btn-outline-warning {
+        padding: 7px 35px;
+        color: var(--secundario);
+        font-size: 18px;
+        &:hover{
+          color: #fff;
+        }
+       
+      }
+    }
+  }
+
+}
+
+.team {
+  background-color: #f4f4f4;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 40px;
+    .team-card {
+      position: relative;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 3px 3px 4px rgb(189, 178, 178);
+      .img-bg {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+      }
+      .team-profile {
+        position: absolute;
+        width:50%;
+        padding: 6px;
+        background-color: #fff;
+        margin: -80px auto 0 auto;
+        left: 64px;
+        border-radius: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+        }
+      }
+      .team-info{
+        margin-top: 60px;
+        text-align: center;
+        h3 {
+          color: var(--primario);
+          margin: 0;
+          font-weight: 700;
+          font-size: 24px;
+        }
+        h4 {
+          color: var(--secundario);
+          font-size: 22px;
+          font-weight: 300;
+        }
+      }
+      .team-boton {
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+      }
+      
+    }
+  }
+  .more {
+    .rounded-pill {
+      padding: 7px 35px; 
+      font-size: 18px;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* testimonials  */
+.testimonials {
+  .bg-testimonials {
+    background-image: url('../imagenes/IMAGE\ \ CATEGORY\ ARCHITECTURE.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    background-size: cover;
+    color: #fff;
+    &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .testimonials-texto {
+    max-width: 360px;
+    width: 90%;
+    margin: 0 auto;
+    text-shadow: var(--text-shadow);
+    z-index: 1;
+    h4 {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+  }
+  }
+  .carousel-indicators {
+   li {
+    background-color: var(--secundario);
+   }
+  }
+  .carousel-item {
+    margin-bottom: 70px;
+  }
+  .carousel-icono {
+    svg {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      top: 150px;
+      left: 140px;
+      color: #f03a03;
+    }
+    .slider-texto {
+      background-color: #fff;
+      color: red;
+      width: 70%;
+      position: absolute;
+      padding: 10px 0;
+      top: 360px;
+      left: 70px;
+      text-align: center;
+      z-index: 100;
+      font-weight: 700;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+/* footer */
+
+.footer {
+  .logo {
+    img {
+      max-width: 140px;
+      width: 90%;
+      margin-top: 40px;
+    }
+  }
+  h3 {
+    color: var(--secundario);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    a {
+      color: #fff;
+      transition: 0.6s ease all;
+      &:hover {
+        color: rgba(255, 255, 255, .7);
+      } 
+    }
+  }
+  .d-flex {
+    gap: 20px;
+  }
+  .redes-sociales {
+    margin-top: 20px;
+    svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      &:hover {
+        color: rgba(255, 255, 255, .7);
+      } 
+    }
+  }
+  .newsletter {
+    display: flex;
+    .contenedor-submit {
+      width: 100%;
+        border: none;
+        border-color: transparent;
+        border-radius: 15px;
+    }
+    .submit {
+      border: none;
+      background-color: var(--secundario);
+      color: #fff;
+      border-radius: 50px;
+      padding: 6px 30px;
+      margin-left: -110px;
+      transform: scale(0.85);
+      font-size: 18px;
+      transition: 0.3s ease all;
+      &:hover {
+        background-color: #df9526;
+      }
+    }
+  }
+  hr {
+    margin-top: 60px;
+    background: #fff;
+  }
+  .copyright p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    text-transform: capitalize;
+    span {
+      text-transform: lowercase;
+    }
+  }
+  .silvera {
+    img{
+      max-width: 120px;
+    }
+  }
 }
