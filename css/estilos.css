@@ -893,15 +893,17 @@ img {
   }
   .newsletter {
     display: flex;
+    @media (max-width: 768px) { 
+      justify-content: center;
+    }
     .contenedor-submit {
       width: 100%;
       border: none;
       border-color: transparent;
       border-radius: 15px;
       @media (max-width: 768px) { 
-        width: 70%;
-        margin: 0 auto;
-     
+        display: flex;
+        width: auto;
       }
     }
     .submit {
@@ -910,14 +912,10 @@ img {
       color: #fff;
       border-radius: 50px;
       padding: 6px 20px;
-      margin-left: -135px;
+      margin-left: -90px;
       transform: scale(0.9);
       font-size: 16px;
       transition: 0.3s ease all;
-      @media (max-width: 768px) { 
-        margin-left: -140px;
-        transform: scaleX(0.7);
-      }
       &:hover {
         background-color: #df9526;
       }
